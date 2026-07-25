@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 from urllib.parse import urlparse
-
+import os
 app = Flask(__name__)
 CORS(app)
 
@@ -122,8 +122,6 @@ def analyze():
 def home():
     return "Page Pulse Backend is Running"
 
-
-import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
